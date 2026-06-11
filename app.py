@@ -5,16 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-endpoint = os.getenv("AZURE_OPENAI_ENDWPOINT")
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 key = os.getenv("AZURE_OPENAI_KEY")
 deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
-
-client = AzureOpenAI(
-    azure_endpoint=endpoint,
-    api_key=key,
-    api_version="2024-02-15-preview"
-)
 
 client = AzureOpenAI(
     azure_endpoint=endpoint,
